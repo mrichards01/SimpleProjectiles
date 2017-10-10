@@ -1,0 +1,23 @@
+<html>
+<head>
+<!-- Use a Javascript loader for later iterations to improve perceived load time to the user -->
+<!-- For now this is simple enough and neglible for the purpose -->
+<script src="SimpleProjectile.js"></script>
+<script src="projectileDisplay.js"></script>
+</head>
+<body>
+<canvas id="projectileAnimation" style="border:1px solid #000000;">/>
+<script>
+  	var canvas = document.getElementById('projectileAnimation');
+  	canvas.width = window.innerWidth;
+  	canvas.height = window.innerHeight;
+
+    projectileDisplay.init(canvas);
+    var tick = 10;
+    setInterval(function() {
+    	projectileDisplay.reDraw(tick);
+    }, tick);
+ 
+</script>
+</body>
+</html>
